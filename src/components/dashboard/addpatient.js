@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { firestore } from '../firebase'
 import '../../assets/css/patient.css'
+import NavbarDashboard from './navbar-dashboard';
 
 const AddPatient = () => {
 
@@ -37,6 +38,8 @@ const AddPatient = () => {
   };
 
   return (
+    <>
+    <NavbarDashboard />
     <div className="patient-outer container">
       <form className='form-patient' method='POST'>
         <div>
@@ -141,6 +144,7 @@ const AddPatient = () => {
               </ul>
       </form>
     </div>
+    </>
   )
 };
 

@@ -33,7 +33,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, emailId, password)
     .then((useCredential) => {
       console.log("Logged in!")
-      history('dashboard')
+      history('dashboard/add-patient')
     })
     .catch((error) => {
         console.log(error)

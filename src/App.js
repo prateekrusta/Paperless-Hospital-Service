@@ -1,7 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/homepage/home";
-import HomeDashboard from "./components/dashboard/homeDashboard"
+import AddPatient from './components/dashboard/addpatient';
+import AdmitPatient from './components/dashboard/admitpatient';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Route index path="/" element={<Home />} />
 
         <Route path="dashboard">
-          <Route index element={<HomeDashboard />} />
+          <Route index path="add-patient" element={<AddPatient />} />
+          <Route path="admit-patient" element={<AdmitPatient />} />
         </Route>
 
       </Routes>
