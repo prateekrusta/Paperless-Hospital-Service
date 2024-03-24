@@ -7,12 +7,18 @@ function App() {
   return (
     <div className="App">
     <Router>
+      <main>
       <Routes path="/" >
-        <Route index element={<Home />} />
+        <Route index path="/" element={<Home />} />
+
+        <Route path="dashboard">
+          <Route index element={<HomeDashboard />} />
+        </Route>
+
       </Routes>
-      <Routes path="dashboard">
-        <Route path="" element={<HomeDashboard />} />
-      </Routes>
+        
+
+      </main>
     </Router>
     </div>
   );
